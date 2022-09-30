@@ -1,0 +1,71 @@
+<main>
+  <div class="form">
+    <ul class="nav-receta">
+      <li><a (click)="listModal('')">Formulario</a></li>
+      <li><a (click)="listModal('receta')">Recetas</a></li>
+    </ul>
+
+    <div *ngIf="setListRecipes">
+      <label for="">paciente</label>
+      <input type="text" [(ngModel)]="nombre" />
+      <label for="">Nombre Medicamento</label>
+      <input type="text" [(ngModel)]="medicina" />
+      <label for="">Receta</label>
+      <textarea
+        name=""
+        id=""
+        cols="30"
+        rows="10"
+        [(ngModel)]="tratamiento"
+      ></textarea>
+    </div>
+
+    <div *ngIf="!setListRecipes">
+      <table>
+        <tr *ngFor="let receta of listaMedicamentos">
+          <td>{{ receta.medicamento }}</td>
+          <td>
+            <button (click)="delRecipe(receta.medicamento)">eliminar</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="buttons">
+      <button (click)="addRecipe()">add</button>
+      <button (click)="delLastRecipe()">delete</button>
+      <button>Imprimir</button>
+    </div>
+  </div>
+
+  <div class="vista">
+    <div class="vista-recipe">
+      <div class="recipe-header">
+        <img class="medicine" src="../../assets/medicine.png" alt="img" />
+        <div class="header-text">
+          <h4>Dr. Andres Lopez Carrillo</h4>
+          <div class="header-datos">
+            <p>MEDICO CIRUJANO</p>
+            <p>CEDULA: 636957</p>
+          </div>
+          <small
+            >Diplomado Gerontologia y Pediatria UAEM. Medicina Integral,
+            Infantil y de Deporte. Diplomado del Adulto Mayor y Enfermedades
+            Cronicas UNAM. Diplomado en Actualidades de Cardiologia</small
+          >
+        </div>
+        <img class="medicine" src="../../assets/medicine.png" alt="imgg" />
+      </div>
+      <div class="recipe-data">
+        <p>Paciente: {{ nombre }}</p>
+        <ol>
+          <li *ngFor="let receta of listaMedicamentos">
+            {{ receta.medicamento }}
+            <br />
+            {{ receta.tratamiento }}
+          </li>
+        </ol>
+      </div>
+      <img class="medicine-background" src="../../assets/medicine.png" alt="" />
+    </div>
+  </div>
+</main>

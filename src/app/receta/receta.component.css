@@ -1,0 +1,73 @@
+main {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.nav-receta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+.form {
+  padding: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.vista {
+  padding: 1rem;
+}
+
+.vista-recipe {
+  border: 2px solid rgba(0, 0, 255, 0.474);
+  position: relative;
+  color: black;
+}
+
+.recipe-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-block-end: 2px solid gray;
+}
+
+.medicine {
+  width: 50px;
+  height: 50px;
+}
+
+.header-text {
+  width: 50ch;
+  text-align: center;
+}
+
+.header-text > *,
+.header-text > .header-datos > * {
+  margin: 0;
+}
+
+.header-datos {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.medicine-background {
+  width: 200px;
+  height: 200px;
+  opacity: 0.2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.recipe-data {
+  width: 70%;
+  margin: 10px auto;
+}

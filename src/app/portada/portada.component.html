@@ -1,0 +1,60 @@
+<main>
+  <div class="form">
+    <section>
+      <label for="">Nombre</label>
+      <input
+        [(ngModel)]="nombre"
+        type="text"
+        placeholder="Nombre"
+        required="true"
+      />
+    </section>
+    <section>
+      <label for="">Materia</label>
+      <input
+        type="text"
+        placeholder="Materia"
+        [(ngModel)]="materia"
+        required="true"
+      />
+    </section>
+    <section>
+      <label for="">N. Contol</label>
+      <input
+        type="number"
+        placeholder="N.Control"
+        [(ngModel)]="nControl"
+        required="true"
+      />
+    </section>
+    <section>
+      <label for="">Semestre</label>
+      <input
+        type="number"
+        placeholder="Semestre"
+        [(ngModel)]="semestre"
+        required="true"
+      />
+    </section>
+    <section>
+      <label for="">Profesor</label>
+      <input
+        type="text"
+        placeholder="Profesor"
+        [(ngModel)]="profesor"
+        required="true"
+      />
+    </section>
+    <section>
+      <label for="">Actividad</label>
+      <input
+        type="text"
+        placeholder="Actividad"
+        [(ngModel)]="actividad"
+        required="true"
+      />
+    </section>
+
+    <button (click)="printPortada()">Crear Portada</button>
+  </div>
+</main>
