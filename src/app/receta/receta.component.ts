@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import html2PDF from 'jspdf-html2canvas';
+import * as Dayjs from 'dayjs';
 
 @Component({
   selector: 'app-receta',
@@ -12,16 +13,21 @@ export class RecetaComponent implements OnInit {
   listaMedicamentos: Array<any> = [];
   setListRecipes: boolean = true;
   nombre: string = '';
+  fecha: any;
   constructor() {}
 
   ngOnInit(): void {
-    /* html2PDF(document.getElementById('page'), {
+    this.fecha = Dayjs().format('MM/DD/YYYY, h:mm A');
+  }
+
+  printRecipe() {
+    html2PDF(document.querySelector('.vista-recipe'), {
       jsPDF: {
         format: 'a4',
       },
       imageType: 'image/jpeg',
-      output: './pdf/generate.pdf',
-    }); */
+      output: `Receta ${this.nombre}.pdf`,
+    });
   }
 
   addRecipe() {

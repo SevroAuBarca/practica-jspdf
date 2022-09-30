@@ -31,9 +31,9 @@
       </table>
     </div>
     <div class="buttons">
-      <button (click)="addRecipe()">add</button>
-      <button (click)="delLastRecipe()">delete</button>
-      <button>Imprimir</button>
+      <button (click)="addRecipe()">Añadir Receta</button>
+      <button (click)="delLastRecipe()">Eliminar Receta</button>
+      <button (click)="printRecipe()">Imprimir Receta</button>
     </div>
   </div>
 
@@ -56,14 +56,31 @@
         <img class="medicine" src="../../assets/medicine.png" alt="imgg" />
       </div>
       <div class="recipe-data">
-        <p>Paciente: {{ nombre }}</p>
+        <div class="recipe-user">
+          <small><strong>Paciente:</strong> {{ nombre }}</small>
+          <small><strong>Fecha:</strong> {{ fecha }}</small>
+        </div>
+
         <ol>
-          <li *ngFor="let receta of listaMedicamentos">
-            {{ receta.medicamento }}
-            <br />
-            {{ receta.tratamiento }}
+          <li class="recipe-user" *ngFor="let receta of listaMedicamentos">
+            <small>
+              <strong>Medicamento:</strong> {{ receta.medicamento }}</small
+            >
+            <small><strong>Cantidad:</strong> {{ receta.tratamiento }}</small>
           </li>
         </ol>
+      </div>
+      <div class="recipe-footer">
+        <div class="footer-div">
+          <small><strong>Tel Consultorio:</strong> (735) 35 25966</small>
+          <small><strong>Tel Doctor:</strong> (735) 116 5236</small>
+
+          <small
+            ><strong>Horario para realizar cita:</strong> 10:00 - 14:00pm de
+            lunes a sabado</small
+          >
+        </div>
+        <p class="firma">Firma</p>
       </div>
       <img class="medicine-background" src="../../assets/medicine.png" alt="" />
     </div>

@@ -1,1 +1,35 @@
-<p>constancia works!</p>
+<main>
+  <div class="form">
+    <label for="">Nombre Alumno</label>
+    <input type="text" [(ngModel)]="nombre" />
+    <label for="">No.Control</label>
+    <input type="number" [(ngModel)]="nControl" />
+    <label for="">Carrera</label>
+    <select name="select" id="" [(ngModel)]="carrera">
+      <option value="ingenieria en sistemas computacionales">
+        Ingenieria en Sistemas Computacionales
+      </option>
+      <option value="ingenieria industrial">Ingenieria Industrial</option>
+      <option value="ingenieria electronica">Ingenieria Electronica</option>
+      <option value="ingenieria mecatronica">Ingenieria Mecatronica</option>
+      <option value="ingenieria en gestion empresarial">
+        Ingenieria en Gestion Empresarial
+      </option>
+      <option value="contador publico">Contador Publico</option>
+    </select>
+    <label for="">Actividad</label>
+    <input type="text" [(ngModel)]="actividad" />
+    <label for="">Desempeño</label>
+    <select name="selectDesempeño" id="" [(ngModel)]="desempeno">
+      <option value="excelente">Excelente</option>
+      <option value="bueno">Bueno</option>
+      <option value="regular">Regular</option>
+      <option value="malo">Malo</option>
+    </select>
+    <label for="">Numero de creditos</label>
+    <input type="number" [(ngModel)]="creditos" />
+    <label for="">Periodo escolar</label>
+    <input type="text" [(ngModel)]="periodoEscolar" />
+    <button (click)="printConstancia()">Imprimir</button>
+  </div>
+</main>

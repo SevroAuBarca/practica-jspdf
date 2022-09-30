@@ -67,7 +67,29 @@ main {
   transform: translate(-50%, -50%);
 }
 
-.recipe-data {
+.recipe-data,
+.recipe-footer {
   width: 70%;
   margin: 10px auto;
+}
+.recipe-data {
+  border-block-end: 2px solid gray;
+}
+
+.recipe-user {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-footer {
+  display: flex;
+}
+
+.recipe-footer .footer-div {
+  display: flex;
+  flex-direction: column;
+}
+.recipe-footer p {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 }
